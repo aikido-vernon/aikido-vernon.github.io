@@ -1,0 +1,32 @@
+<div class="header">
+    <ul class="nav nav-pills pull-right">
+        <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aïkido <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                {{#withSort pages "data.order"}}
+                    {{#is data.section 'Aïkido'}}
+                        <li>
+                            <a href="{{basename}}.html">{{data.page}}</a>
+                        </li>
+                    {{/is}}
+                {{/withSort}}
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Club <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                {{#withSort pages "data.order"}}
+                    {{#is data.section 'Club'}}
+                        <li>
+                            <a href="{{basename}}.html">{{data.page}}</a>
+                        </li>
+                    {{/is}}
+                {{/withSort}}
+            </ul>
+        </li>
+        <li><a href="inscriptions.html">Inscriptions</a></li>
+        <li><a href="#">Ressources</a></li>
+    </ul>
+    <h3 class="text-muted">Aïkido Vernon</h3>
+</div>
