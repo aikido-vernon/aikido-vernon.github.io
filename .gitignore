@@ -1,4 +1,5 @@
 app/*.html
+app/styles/*.css
 .idea
 *.iml
 node_modules
