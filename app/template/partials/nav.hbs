@@ -17,7 +17,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="{{#is page.section 'Accueil'}}active{{/is}}"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
                 <li class="{{#is page.section 'Aïkido'}}active{{/is}} dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aïkido <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle">Aïkido <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         {{#withSort pages "data.order"}}
                             {{#is data.section 'Aïkido'}}
@@ -30,7 +30,7 @@
                 </li>
 
                 <li class="{{#is page.section 'Club'}}active{{/is}} dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Club <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle">Club <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         {{#withSort pages "data.order"}}
                             {{#is data.section 'Club'}}
