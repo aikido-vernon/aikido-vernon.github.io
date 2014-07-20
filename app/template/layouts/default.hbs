@@ -49,6 +49,15 @@
 <!-- endbower -->
 <!-- endbuild -->
 
+{{#if jspdf}}
+    <!-- build:js({.tmp,app}) scripts/jspdf.js -->
+    <script src="scripts/pdfkit.js"></script>
+    <script src="scripts/blob-stream-v0.1.2.js"></script>
+    <script src="scripts/FileSaver.js"></script>
+    <script src="scripts/inscription_pdfkit.js"></script>
+    <!-- endbuild -->
+{{/if}}
+
 <script type="text/javascript">
     $('ul.nav li.dropdown').hover(function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(50).fadeIn();

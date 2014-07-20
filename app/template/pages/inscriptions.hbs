@@ -2,6 +2,7 @@
 section : Inscriptions
 page : Inscriptions
 title : Inscriptions
+jspdf : true
 ---
 
 <h2>Inscriptions</h2>
@@ -52,3 +53,325 @@ title : Inscriptions
         <td>114€</td>
     </tr>
 </table>
+
+<h3>Formulaire d'inscription</h3>
+
+<form id="inscription" class="form-horizontal" role="form">
+
+<div class="panel panel-info">
+    <div class="panel-heading">Informations générales</div>
+
+    <div class="panel-body">
+
+        <div class="form-group">
+            <label for="nom" class="col-sm-2 control-label">Nom</label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="nom">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="prenom" class="col-sm-2 control-label">Prénom</label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="prenom">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="date-de-naissance" class="col-sm-2 control-label">Date de naissance</label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="date-de-naissance">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="sexe" class="col-sm-2 control-label">Sexe</label>
+
+            <div class="col-sm-10 btn-group" data-toggle="buttons">
+                <label class="btn btn-default active">
+                    <input type="radio" class="form-control" name="sexe" id="homme">Homme
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" class="form-control" name="sexe" id="femme">Femme
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="cours" class="col-sm-2 control-label">Cours</label>
+
+            <div class="col-sm-10 btn-group" data-toggle="buttons">
+                <label class="btn btn-default active">
+                    <input type="radio" class="form-control" name="cours" id="adulte">Adulte
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" class="form-control" name="cours" id="ado">Ado
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" class="form-control" name="cours" id="enfant">Enfant
+                </label>
+            </div>
+        </div>
+
+        <div id="parent-form" class="panel panel-default">
+            <div class="panel-heading">Responsable légal</div>
+            <div class="form-group">
+                <label for="parent" class="col-sm-2 control-label">Responsable légal</label>
+
+                <div class="panel-body">
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="parent" placeholder="Nom Prénom">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="date-de-naissance-parent" class="col-sm-2 control-label">Date de naissance</label>
+
+                <div class="panel-body">
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="date-de-naissance-parent">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ville-parent" class="col-sm-2 control-label">Ville</label>
+
+                <div class="panel-body">
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="ville-parent">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="relation-parent" class="col-sm-2 control-label">Relation</label>
+
+                <div class="panel-body">
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="relation-parent" placeholder="Père, Mère, Autre (précisez)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="rue" class="col-sm-2 control-label">Rue</label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="rue">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="rue2" class="col-sm-2 control-label">Rue (ligne 2)</label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="rue2">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="ville" class="col-sm-2 control-label">Ville</label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="ville">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="code-postal" class="col-sm-2 control-label">Code postal</label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="code-postal">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="telephone" class="col-sm-2 control-label">Téléphone</label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="telephone">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="courriel" class="col-sm-2 control-label">Courriel</label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="courriel">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="numero-licence" class="col-sm-2 control-label">Numéro de licence</label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="numero-licence">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="grade" class="col-sm-2 control-label">Grade</label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="grade">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10 btn-group" data-toggle="buttons">
+                <label class="btn btn-default">
+                    <input type="radio" class="form-control" name="type-inscription" id="premiere-inscription">Première inscription au club
+                </label>
+                <label class="btn btn-default active">
+                    <input type="radio" class="form-control" name="type-inscription" id="reinscription">Ré-inscription
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-info">
+    <div class="panel-heading">Autorisations et assurance</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-sm-9" id="autorisation-image-texte"></div>
+
+            <div class="col-sm-3">
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default active">
+                        <input type="radio" class="form-control" name="autorisation-image" id="autorisationImageOui">OUI
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" class="form-control" name="autorisation-image" id="autorisationImageNon">NON
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group alert-danger">
+            <div class="col-sm-9" id="assurance-texte"></div>
+            <div class="col-sm-3">
+                <label>Lu et approuvé
+                    <input type="checkbox" class="form-control" name="lu-et-approuve">
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-info">
+    <div class="panel-heading">Tarifs et moyens de paiement</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Inscription</label>
+
+            <div class="col-sm-10 btn-group" data-toggle="buttons">
+                <label class="btn btn-default active">
+                    <input type="radio" class="form-control" name="mode-inscription" id="annee">À l'année
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" class="form-control" name="mode-inscription" id="trimestre">Au trimestre
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" class="form-control" name="mode-inscription" id="mois">Au mois
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" class="form-control" name="mode-inscription" id="carnet">Au carnet de 10 cours (80€)
+                </label>
+            </div>
+        </div>
+
+        <div id="single-form" class="form-group">
+            <div class="col-sm-offset-2 col-sm-10 btn-group" data-toggle="buttons">
+                <label class="btn btn-default active">
+                    <input type="radio" class="form-control" name="seul" id="seul">Seul(e)
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" class="form-control" name="seul" id="couple">En couple
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Tarif</label>
+
+            <p id="tarif" class="form-control-static"></p>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Moyen de paiement</label>
+
+            <div class="col-sm-10 btn-group" data-toggle="buttons">
+                <label class="btn btn-default active">
+                    <input type="radio" class="form-control" name="moyen-paiement" id="cheque">Chèque
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" class="form-control" name="moyen-paiement" id="especes">Espèces
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" class="form-control" name="moyen-paiement" id="autre">Autre
+                </label>
+            </div>
+        </div>
+
+        <div id="cheque-form">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Mensualités</label>
+
+                <div class="col-sm-10 btn-group" data-toggle="buttons">
+                    <label class="btn btn-default active">
+                        <input type="radio" class="form-control" name="mensualite" id="1">1 fois
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" class="form-control" name="mensualite" id="2">2 fois
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" class="form-control" name="mensualite" id="3">3 fois
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="titulaireCheque" class="col-sm-2 control-label">Titulaire d(u)(es) chèque(s)</label>
+
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="titulaire-cheque">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="banque" class="col-sm-2 control-label">Banque</label>
+
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="banque">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Générer le PDF</button>
+    </div>
+</div>
+<!--<iframe id="iframe" width="700" height="900"></iframe>-->
+</form>
+
+<!-- Modal -->
+<div class="modal fade" id="are-you-sure" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fermer</span></button>
+                <h4 class="modal-title" id="myModalLabel">Attention</h4>
+            </div>
+            <div class="modal-body">
+                Vous devez avoir lu et approuvé les informations concernant l'assurance pour générer le pdf.
+            </div>
+        </div>
+    </div>
+</div>
