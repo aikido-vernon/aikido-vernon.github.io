@@ -42,7 +42,18 @@
                     </ul>
                 </li>
                 <li class="{{#is page.section 'Inscriptions'}}active{{/is}}"><a href="inscriptions.html">Inscriptions</a></li>
-                <li class="{{#is page.section 'Ressources'}}active{{/is}}"><a href="#">Ressources</a></li>
+                <li class="{{#is page.section 'Ressources'}}active{{/is}} dropdown">
+                    <a href="#" class="dropdown-toggle">Ressources <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        {{#withSort pages "data.order"}}
+                            {{#is data.section 'Ressources'}}
+                                <li>
+                                    <a href="{{basename}}.html">{{data.page}}</a>
+                                </li>
+                            {{/is}}
+                        {{/withSort}}
+                    </ul>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
