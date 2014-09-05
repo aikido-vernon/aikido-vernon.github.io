@@ -2,35 +2,36 @@
 
 $ ->
   tarifs =
-    carnet: 80
+    carnet: "80€ + licence fédérale de 35€ et adhésion au club de 40€"
     annee:
-      ado: 100
-      enfant: 50
+      ado: "168€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
+      enfant: "114€, comprenant la licence fédérale de 25€ et l'adhésion au club de 20€"
       adulte:
         homme:
-          seul: 200
-          couple: 150
-        femme: 150
+          seul: "237€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
+          couple: "198€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
+        femme: "198€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
     trimestre:
-      ado: 75
-      enfant: 25
+      ado: "113€/1er trim puis 46€/trim (soit 205€)"
+      enfant: "79€/1er trim puis 34€/trim (soit 144€)"
       adulte:
         homme:
-          seul: 175
-          couple: 125
-        femme: 125
+          seul: "149€/1er trim puis 69€/trim (soit 287€)"
+          couple: "132€/1er trim puis 56€/trim (soit 244€)"
+        femme: "132€/1er trim puis 56€/trim (soit 244€)"
     mois:
-      ado: 50
-      enfant: 0
+      ado: "20€/mois + 35€ de licence et 30€ d'adhésion le premier mois"
+      enfant: "12€/mois + 25€ de licence et 20€ d'adhésion le premier mois"
       adulte:
         homme:
-          seul: 150
-          couple: 100
-        femme: 100
+          seul: "28€/mois + 35€ de licence et 40€ d'adhésion le premier mois"
+          couple: "28€/mois + 35€ de licence et 40€ d'adhésion le premier mois"
+        femme: "28€/mois + 35€ de licence et 40€ d'adhésion le premier mois"
 
   form = $('#inscription')
   seulForm = form.find('#single-form')
   chequeForm = form.find('#cheque-form')
+  mensualitesForm = form.find('#mensualites')
   parentForm = form.find('#parent-form')
   autorisationImageDiv = form.find('#autorisation-image-texte')
   assuranceDiv = form.find('#assurance-texte')
@@ -38,6 +39,7 @@ $ ->
   tarif = form.find('#tarif')
 
   coursInputs = form.find('input[name=cours]')
+  modeInscriptionInputs = form.find('input[name=mode-inscription]')
   moyenDePaiementInputs = form.find('input[name=moyen-paiement]')
   radioInputs = form.find('input[type=radio]')
 
@@ -85,10 +87,10 @@ $ ->
       text = mode[f['cours']]
     else
       text = mode
-    tarif.text(text + "€")
+    tarif.text(text)
 
   seulDisplayable = () ->
-    f['cours'] == 'adulte' && f['modeInscription'] != 'carnet' && f['sexe'] == 'homme'
+    f['cours'] == 'adulte' && (f['modeInscription'] == 'annee' || f['modeInscription'] == 'trimestre') && f['sexe'] == 'homme'
 
 
   disableCarnet = (disable) ->
@@ -118,11 +120,17 @@ $ ->
       when 'ado','enfant'
         disableCarnet(true)
         parentForm.show()
-        seulForm.hide()
       else
         disableCarnet(false)
         parentForm.hide()
-        seulForm.show()
+
+  modeInscriptionInputs.on 'change', ->
+    switch $(this).attr('id')
+      when 'annee'
+        mensualitesForm.show()
+      else
+        mensualitesForm.hide()
+
 
   moyenDePaiementInputs.on 'change', ->
     switch $(this).attr('id')
@@ -367,8 +375,6 @@ $ ->
       .font('Helvetica-Bold')
       .text 'Règlement en espèces en une seule fois',
         align: 'center'
-    else
-      newLine('Règlement', 'Autre')
 
     stream.on 'finish', ->
       blob = stream.toBlob('application/pdf')

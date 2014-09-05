@@ -24,35 +24,90 @@ jspdf : true
 <h3>Pièces à fournir</h3>
 
 <ul>
-    <li>Une adresse Email valide ou 3 enveloppes timbrées libellées à votre nom et adresse.</li>
+    <li>Une adresse email valide ou 3 enveloppes timbrées libellées à votre nom et adresse.</li>
     <li>Chèque(s) ou espèces. (possibilité de paiement en plusieurs fois possible - voir sur place)</li>
-    <li>Un certificat médical (<strong>INDISPENSABLE DÈS LE PREMIER COURS</strong>)</li>
+    <li>Un certificat médical (<strong class="text-danger">INDISPENSABLE DÈS LE PREMIER COURS</strong>)</li>
 </ul>
 
 <h3>Prix des cours</h3>
 
-<table class="table">
-    <tr>
-        <td><strong>Adultes (Homme)</strong></td>
-        <td>237€</td>
-    </tr>
-    <tr>
-        <td><strong>Adultes (Femme)</strong></td>
-        <td>198€</td>
-    </tr>
-    <tr>
-        <td><strong>Couples</strong></td>
-        <td>198€/pers.</td>
-    </tr>
-    <tr>
-        <td><strong>Adolescents</strong></td>
-        <td>168€</td>
-    </tr>
-    <tr>
-        <td><strong>Enfants (8 à 12 ans)</strong></td>
-        <td>114€</td>
-    </tr>
-</table>
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#tab-annee" data-toggle="pill">À l'année (possibilité de paiement en trois fois)</a></li>
+    <li><a href="#tab-trimestre" data-toggle="pill">Au trimestre</a></li>
+    <li><a href="#tab-mois" data-toggle="pill">Au mois</a></li>
+    <li><a href="#tab-carnet" data-toggle="pill">Au carnet (10 cours)</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active" id="tab-annee">
+        <table class="table table-bordered">
+            <tr>
+                <td><strong>Homme</strong></td>
+                <td>237€</td>
+            </tr>
+            <tr>
+                <td><strong>Femme/couple</strong></td>
+                <td>198€</td>
+            </tr>
+            <tr>
+                <td><strong>Adolescents (13 à 18 ans)</strong></td>
+                <td>168€</td>
+            </tr>
+            <tr>
+                <td><strong>Enfants (8 à 12 ans)</strong></td>
+                <td>114€</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="tab-trimestre">
+        <table class="table table-bordered">
+            <tr>
+                <td><strong>Homme</strong></td>
+                <td>149€/1er trim puis 69€/trim (soit 287€)</td>
+            </tr>
+            <tr>
+                <td><strong>Femme/couple</strong></td>
+                <td>132€/1er trim puis 56€/trim (soit 244€)</td>
+            </tr>
+            <tr>
+                <td><strong>Adolescents (13 à 18 ans)</strong></td>
+                <td>113€/1er trim puis 46€/trim (soit 205€)</td>
+            </tr>
+            <tr>
+                <td><strong>Enfants (8 à 12 ans)</strong></td>
+                <td>79€/1er trim puis 34€/trim (soit 144€)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="tab-mois">
+        <table class="table table-bordered">
+            <tr>
+                <td><strong>Adulte</strong></td>
+                <td>28€/mois + 35€ de licence et 40€ d'adhésion le premier mois</td>
+            </tr>
+            <tr>
+                <td><strong>Adolescents (13 à 18 ans)</strong></td>
+                <td>20€/mois + 35€ de licence et 30€ d'adhésion le premier mois</td>
+            </tr>
+            <tr>
+                <td><strong>Enfants (8 à 12 ans)</strong></td>
+                <td>12€/mois + 25€ de licence et 20€ d'adhésion le premier mois</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="tab-carnet">
+        <table class="table table-bordered">
+            <tr>
+                <td><strong>Adultes</strong></td>
+                <td>80€ (+35€ de licence et 40€ d'adhésion au club)</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
 
 <h3>Formulaire d'inscription</h3>
 
@@ -311,14 +366,11 @@ jspdf : true
                 <label class="btn btn-default">
                     <input type="radio" class="form-control" name="moyen-paiement" id="especes">Espèces
                 </label>
-                <label class="btn btn-default">
-                    <input type="radio" class="form-control" name="moyen-paiement" id="autre">Autre
-                </label>
             </div>
         </div>
 
         <div id="cheque-form">
-            <div class="form-group">
+            <div id="mensualites" class="form-group">
                 <label class="col-sm-2 control-label">Mensualités</label>
 
                 <div class="col-sm-10 btn-group" data-toggle="buttons">
