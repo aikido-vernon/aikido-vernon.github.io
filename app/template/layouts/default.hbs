@@ -63,6 +63,13 @@
     }, function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(50).fadeOut();
     });
+
+    contactForm = $('.contact-form');
+
+    if (contactForm.length) {
+        $('#email').prop('required', true);
+        $('#message').prop('required', true);
+    }
 </script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
