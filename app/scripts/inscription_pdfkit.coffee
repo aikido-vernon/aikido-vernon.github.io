@@ -24,9 +24,9 @@ $ ->
       enfant: "12€/mois + 25€ de licence et 20€ d'adhésion le premier mois"
       adulte:
         homme:
-          seul: "28€/mois + 35€ de licence et 40€ d'adhésion le premier mois"
-          couple: "28€/mois + 35€ de licence et 40€ d'adhésion le premier mois"
-        femme: "28€/mois + 35€ de licence et 40€ d'adhésion le premier mois"
+          seul: "30€/mois + 35€ de licence et 40€ d'adhésion le premier mois"
+          couple: "25€/mois + 35€ de licence et 40€ d'adhésion le premier mois"
+        femme: "25€/mois + 35€ de licence et 40€ d'adhésion le premier mois"
 
   form = $('#inscription')
   seulForm = form.find('#single-form')
