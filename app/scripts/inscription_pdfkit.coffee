@@ -90,7 +90,7 @@ $ ->
     tarif.text(text)
 
   seulDisplayable = () ->
-    f['cours'] == 'adulte' && (f['modeInscription'] == 'annee' || f['modeInscription'] == 'trimestre') && f['sexe'] == 'homme'
+    f['cours'] == 'adulte' && f['modeInscription'] != 'carnet' && f['sexe'] == 'homme'
 
 
   disableCarnet = (disable) ->
