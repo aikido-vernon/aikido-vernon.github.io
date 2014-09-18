@@ -168,6 +168,11 @@ $ ->
     e.preventDefault()
 
     loadFields()
+    $.ajax 'https://forms.brace.io/luc.mazon@gmail.com',
+      type : 'POST'
+      data : f
+      dataType : 'html'
+      encode : true
 
     if (!f['luEtApprouve'])
       $('#are-you-sure').modal('show')
