@@ -57,6 +57,12 @@
     <!-- endbuild -->
 {{/if}}
 
+{{#if sliphover}}
+    <!-- build:js({.tmp,app}) scripts/sliphover.js -->
+    <script src="scripts/jquery.sliphover.js"></script>
+    <script src="scripts/trombinoscope.js"></script>
+{{/if}}
+
 <script type="text/javascript">
     $('ul.nav li.dropdown').hover(function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(50).fadeIn();
