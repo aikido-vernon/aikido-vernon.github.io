@@ -9,6 +9,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 
 $light-grey: #afb3b9
 
+$trombi-caption-height: 30px
+$trombi-height: 280px
+$trombi-width: $trombi-height * 0.75
+$trombi-margin: 5px
+$trombi-image-width: $trombi-width - 2 * $trombi-margin
+$trombi-image-height: $trombi-width - 2 * $trombi-margin
+
 .navbar-brand img
   margin-top: -5px
   font-family: 'Patua One', cursive
@@ -77,6 +84,34 @@ a
   li
     list-style-type: none
     display: inline-block
-    img
-      width: 150px
+    div
+      border: 5px solid #fff
+      cursor: pointer
+      width: $trombi-width
+      height: $trombi-height
+      float: left
       margin: 5px
+      position: relative
+      overflow: hidden
+      -webkit-box-shadow: 1px 1px 1px 1px #ccc
+      -moz-box-shadow: 1px 1px 1px 1px #ccc
+      box-shadow: 1px 1px 1px 1px #ccc
+
+      img
+        position: absolute
+        left: 0
+        width: $trombi-image-width
+
+.caption
+  background-color: rgba(0,0,0,0.8)
+  position: absolute
+  color: #fff
+  z-index: 100
+  left: 0
+  bottom: 0
+  height: $trombi-caption-height
+  width: $trombi-width
+  display: block
+  bottombottom: -$trombi-caption-height
+  line-height: 25pt
+  text-align: center
