@@ -8,4 +8,3 @@ $ ->
         name = entry["summary"]["$t"]
         url = entry["content"]["src"]
         ul.append("<li><div><img src='"+url+"'></img><span class='caption'><p>"+name+"</p></span></div></li>")
-  $("#trombinoscope").sliphover height: '30px'
