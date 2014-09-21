@@ -63,6 +63,10 @@
     <!-- endbuild -->
 {{/if}}
 
+<!-- build:js({.tmp,app}) scripts/stages.js -->
+<script src="scripts/stages.js"></script>
+<!-- endbuild -->
+
 <script type="text/javascript">
     $('ul.nav li.dropdown').hover(function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(50).fadeIn();
