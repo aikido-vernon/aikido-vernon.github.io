@@ -61,7 +61,7 @@ module.exports = function (grunt) {
       },
       coffee: {
         files: ['<%= config.app %>/scripts/{,*/}*.{coffee,litcoffee,coffee.md}'],
-        tasks: ['coffee:dist']
+        tasks: ['copy:coffee', 'coffee:dist']
       },
       livereload: {
         options: {
@@ -176,15 +176,18 @@ module.exports = function (grunt) {
     // Compiles CoffeeScript to JavaScript
     coffee: {
       dist: {
-        files: [
-          {
-            expand: true,
-            cwd: '<%= config.app %>/scripts',
-            src: '{,*/}*.{coffee,litcoffee,coffee.md}',
-            dest: '.tmp/scripts',
-            ext: '.js'
-          }
-        ]
+          options: {
+              sourceMap: true
+          },
+          files: [
+              {
+                  expand: true,
+                  cwd: '.tmp/scripts',
+                  src: '**/*.coffee',
+                  dest: '.tmp/scripts',
+                  ext: '.js'
+              }
+          ]
       }
     },
     // Compiles Sass to CSS and generates necessary files if requested
@@ -358,7 +361,16 @@ module.exports = function (grunt) {
 
     // Copies remaining files to places other tasks can use
     copy: {
-      dist: {
+        coffee: {
+            files: [{
+                expand: true,
+                dot: true,
+                cwd: '<%= config.app %>/scripts',
+                dest: '.tmp/scripts',
+                src: '**/*.coffee'
+            }]
+        },
+        dist: {
         files: [
           {
             expand: true,
@@ -412,6 +424,7 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up build process
     concurrent: {
       server: [
+          'copy:coffee',
         'coffee:dist',
         'sass:server',
         'copy:styles'
@@ -437,6 +450,8 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+        'copy:coffee',
+        'coffee:dist',
       'assemble',
       'concurrent:server',
       'autoprefixer',
@@ -464,6 +479,8 @@ module.exports = function (grunt) {
     'clean:all',
     'clean:dist',
     'assemble',
+      'copy:coffee',
+      'coffee:dist',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
