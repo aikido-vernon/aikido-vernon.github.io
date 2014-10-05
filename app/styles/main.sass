@@ -39,6 +39,7 @@ body
 
 .jumbotron
   text-align: center
+
 .back-jumbotron
   margin-top: 20px
   background: url('../images/background_logo.png')
@@ -52,7 +53,7 @@ body
   .news-title
     font-weight: bold
 
-h1,h2,h3,h4,h5,h6
+h1, h2, h3, h4, h5, h6
   color: $darker-blue
 
 a
@@ -63,6 +64,7 @@ a
 
 .pull-left
   margin-right: 10px
+
 .pull-right
   margin-left: 10px
 
@@ -103,7 +105,7 @@ a
         width: $trombi-image-width
 
 .caption
-  background-color: rgba(0,0,0,0.8)
+  background-color: rgba(0, 0, 0, 0.8)
   position: absolute
   color: #fff
   z-index: 100
@@ -115,3 +117,124 @@ a
   bottombottom: -$trombi-caption-height
   line-height: 25pt
   text-align: center
+
+#slick-stages
+  margin: 30px
+  margin-bottom: 50px
+  padding-left: 30px
+  padding-right: 30px
+  img
+    width: 500px
+
+.effects
+  padding-left: 15px
+  .img
+    position: relative
+    float: left
+    margin-bottom: 5px
+    overflow: hidden
+    &:nth-child(n)
+      margin-right: 5px
+    &:first-child
+      margin-left: -15px
+    &:last-child
+      margin-right: 0
+    img
+      display: block
+      margin: 0
+      padding: 0
+      max-width: 100%
+      height: auto
+
+.overlay
+  display: block
+  position: absolute
+  z-index: 20
+  background: rgba(0, 0, 0, 0.8)
+  overflow: hidden
+  transition: all 0.5s
+
+a
+  &.close-overlay
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 100
+    width: 45px
+    height: 45px
+    font-size: 20px
+    font-weight: 700
+    color: #fff
+    line-height: 45px
+    text-align: center
+    background-color: #000
+    cursor: pointer
+    &.hidden
+      display: none
+  &.expand
+    display: block
+    position: absolute
+    z-index: 100
+    width: 60px
+    height: 60px
+    border: solid 5px #fff
+    text-align: center
+    color: #fff
+    line-height: 50px
+    font-weight: 700
+    font-size: 30px
+    border-radius: 30px
+
+#effect
+  & .overlay
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    opacity: 0
+    & a.expand
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      margin: auto
+      width: 100%
+      height: 100%
+      -webkit-border-radius: 0
+      -moz-border-radius: 0
+      -ms-border-radius: 0
+      -o-border-radius: 0
+      border-radius: 0
+      -webkit-transition: all 0.5s
+      -moz-transition: all 0.5s
+      -o-transition: all 0.5s
+      transition: all 0.5s
+  & .img.hover
+    & .overlay
+      opacity: 1
+      & h2
+        font-weight: bold
+        width: 100%
+        text-align: center
+        color: white
+        position: absolute
+        top: 100px
+        -webkit-transition: all 0.5s
+        -moz-transition: all 0.5s
+        -o-transition: all 0.5s
+        transition: all 0.5s
+
+#effect .img.hover .overlay a.expand
+  width: 60px
+  height: 60px
+  -webkit-border-radius: 30px
+  -moz-border-radius: 30px
+  -ms-border-radius: 30px
+  -o-border-radius: 30px
+  border-radius: 30px
+
+#stages
+  ul
+    li
+      margin-top: 10px
