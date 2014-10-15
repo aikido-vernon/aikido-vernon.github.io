@@ -2,7 +2,9 @@
 
 $ ->
   markdownify = (div, sessionItemName) ->
-    div.append(marked(sessionStorage.getItem(sessionItemName)))
+    md = sessionStorage.getItem(sessionItemName)
+    regex = /(!\[.*?\]\s*\((?!http))(.*)/g
+    div.append(marked(md.replace(regex, '$1https://googledrive.com/host/0B_I9jsxxYO-WcnhYYlVhVklXaUk/$2')))
     $('table').addClass('table table-striped table-bordered')
 
   load = (sessionItemName, div, url) ->
