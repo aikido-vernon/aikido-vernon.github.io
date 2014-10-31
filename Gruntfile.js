@@ -257,6 +257,7 @@ module.exports = function (grunt) {
                         '<%= config.dist %>/scripts/{,*/}*.js',
                         '<%= config.dist %>/./{,*/}*.css',
                         '<%= config.dist %>/images/{,*/}*.*',
+                        '<%= config.dist %>/resources/{,*/}*.*',
                         '<%= config.dist %>/styles/fonts/{,*/}*.*',
                         '<%= config.dist %>/*.{ico,png}'
                     ]
@@ -385,7 +386,8 @@ module.exports = function (grunt) {
                             'CNAME',
                             'images/{,*/}*.webp',
                             '{,*/}*.html',
-                            'styles/fonts/{,*/}*.*'
+                            'styles/fonts/{,*/}*.*',
+                            'resources/*.*'
                         ]
                     },
                     {
