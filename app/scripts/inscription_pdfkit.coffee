@@ -168,7 +168,7 @@ $ ->
     e.preventDefault()
 
     loadFields()
-    $.ajax 'https://forms.brace.io/luc.mazon@gmail.com',
+    $.ajax 'https://formspree.io/luc.mazon@gmail.com',
       type : 'POST'
       data : f
       dataType : 'html'
