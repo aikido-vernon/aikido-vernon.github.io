@@ -4,21 +4,21 @@ $ ->
   tarifs =
     carnet: "80€ + licence fédérale de 35€ et adhésion au club de 40€"
     annee:
-      ado: "168€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
-      enfant: "114€, comprenant la licence fédérale de 25€ et l'adhésion au club de 20€"
+      ado: "190€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
+      enfant: "130€, comprenant la licence fédérale de 25€ et l'adhésion au club de 20€"
       adulte:
         homme:
-          seul: "237€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
-          couple: "198€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
-        femme: "198€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
+          seul: "270€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
+          couple: "230€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
+        femme: "230€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
     trimestre:
-      ado: "113€/1er trim puis 46€/trim (soit 205€)"
-      enfant: "79€/1er trim puis 34€/trim (soit 144€)"
+      ado: "129€/1er trim puis 54€/trim (soit 237€)"
+      enfant: "104€/1er trim puis 29€/trim (soit 162€)"
       adulte:
         homme:
-          seul: "149€/1er trim puis 69€/trim (soit 287€)"
-          couple: "132€/1er trim puis 56€/trim (soit 244€)"
-        femme: "132€/1er trim puis 56€/trim (soit 244€)"
+          seul: "163€/1er trim puis 88€/trim (soit 339€)"
+          couple: "146€/1er trim puis 71€/trim (soit 288€)"
+          femme: "146€/1er trim puis 71€/trim (soit 288€)"
     mois:
       ado: "20€/mois + 35€ de licence et 30€ d'adhésion le premier mois"
       enfant: "12€/mois + 25€ de licence et 20€ d'adhésion le premier mois"
@@ -168,7 +168,7 @@ $ ->
     e.preventDefault()
 
     loadFields()
-    $.ajax 'https://formspree.io/luc.mazon@gmail.com',
+    $.ajax 'https://formspree.io/aikido.vernon@gmail.com',
       type : 'POST'
       data : f
       dataType : 'html'
