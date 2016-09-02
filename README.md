@@ -1,10 +1,24 @@
 [git-subtree](https://github.com/apenwarr/git-subtree)
 
+PRÉREQUIS
+=========
+
+- git
+- git-subtree
+- ruby
+- sass
+- npm
+- bower
+- grunt
+
 INSTALLATION
 ============
 
 ```bash
-curl -sSL https://get.rvm.io | bash -s stable
+git clone git@github.com:aikido-vernon/aikido-vernon.github.io.git
+command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+curl -sSL https://get.rvm.io | bash -s stable --ruby
+
 gem install sass
 
 sudo npm install -g bower grunt-cli
