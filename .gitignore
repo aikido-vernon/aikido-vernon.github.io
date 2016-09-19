@@ -1,4 +1,4 @@
-app/*.html
+#app/*.html
 app/styles/*.css
 .idea
 *.iml
