@@ -7,25 +7,13 @@ $ ->
       ado: "190€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
       enfant: "130€, comprenant la licence fédérale de 25€ et l'adhésion au club de 20€"
       adulte:
-        homme:
-          seul: "270€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
-          couple: "230€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
+        homme: "230€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
         femme: "230€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
-    trimestre:
-      ado: "129€/1er trim puis 54€/trim (soit 237€)"
-      enfant: "104€/1er trim puis 29€/trim (soit 162€)"
-      adulte:
-        homme:
-          seul: "163€/1er trim puis 88€/trim (soit 339€)"
-          couple: "146€/1er trim puis 71€/trim (soit 288€)"
-          femme: "146€/1er trim puis 71€/trim (soit 288€)"
     mois:
       ado: "20€/mois + 35€ de licence et 30€ d'adhésion le premier mois"
       enfant: "12€/mois + 25€ de licence et 20€ d'adhésion le premier mois"
       adulte:
-        homme:
-          seul: "30€/mois + 35€ de licence et 40€ d'adhésion le premier mois"
-          couple: "25€/mois + 35€ de licence et 40€ d'adhésion le premier mois"
+        homme: "25€/mois + 35€ de licence et 40€ d'adhésion le premier mois"
         femme: "25€/mois + 35€ de licence et 40€ d'adhésion le premier mois"
 
   form = $('#inscription')
@@ -347,8 +335,6 @@ $ ->
     switch f['modeInscription']
       when 'annee'
         category = 'Année '
-      when 'trimestre'
-        category = 'Trimestre '
       when 'mois'
         category = 'Mois '
       when 'carnet'
