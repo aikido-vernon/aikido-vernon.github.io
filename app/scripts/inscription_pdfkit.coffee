@@ -4,7 +4,7 @@ $ ->
   tarifs =
     carnet: "80€ + licence fédérale de 35€ et adhésion au club de 40€"
     annee:
-      ado: "190€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
+      ado: "150€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
       enfant: "130€, comprenant la licence fédérale de 25€ et l'adhésion au club de 20€"
       adulte:
         homme: "230€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
