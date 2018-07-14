@@ -4,17 +4,11 @@ $ ->
   tarifs =
     carnet: "80€ + licence fédérale de 35€ et adhésion au club de 40€"
     annee:
-      ado: "150€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
-      enfant: "130€, comprenant la licence fédérale de 25€ et l'adhésion au club de 20€"
+      ado: "130€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
+      enfant: "75€, comprenant la licence fédérale de 25€ et l'adhésion au club de 20€"
       adulte:
-        homme: "230€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
-        femme: "230€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
-    mois:
-      ado: "20€/mois + 35€ de licence et 30€ d'adhésion le premier mois"
-      enfant: "12€/mois + 25€ de licence et 20€ d'adhésion le premier mois"
-      adulte:
-        homme: "25€/mois + 35€ de licence et 40€ d'adhésion le premier mois"
-        femme: "25€/mois + 35€ de licence et 40€ d'adhésion le premier mois"
+        homme: "180€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
+        femme: "180€, comprenant la licence fédérale de 35€ et l'adhésion au club de 40€"
 
   form = $('#inscription')
   seulForm = form.find('#single-form')
@@ -156,7 +150,7 @@ $ ->
     e.preventDefault()
 
     loadFields()
-    $.ajax 'https://formspree.io/aikido.vernon@gmail.com',
+    $.ajax 'https://formspree.io/asav.bureau@gmail.com',
       type : 'POST'
       data : f
       dataType : 'html'
